@@ -6,6 +6,7 @@ from downloader import descargar_media
 
 CONFIG_PATH = os.path.join(os.path.expanduser("~"), ".pepe_downloader_config.json")
 CARPETA_DEFAULT = os.path.join(os.path.expanduser("~"), "Downloads")
+VERSION= "0.3.1"
 
 
 def cargar_config():
@@ -42,6 +43,11 @@ def main(page: ft.Page):
     page.window.resizable = False
     page.window.maximizable = False
     page.padding = 24
+    
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    icon_path = os.path.join(base_dir, "assets", "icon.ico")
+    if os.path.exists(icon_path):
+        page.window.icon = icon_path
 
     config = cargar_config()
     carpeta_actual = config.get("carpeta_descargas", CARPETA_DEFAULT)

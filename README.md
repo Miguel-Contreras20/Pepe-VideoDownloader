@@ -26,3 +26,17 @@ Pepe-VideoDownloader/
 ├── main.py             # Interfaz gráfica y control de estados con Flet
 ├── .gitignore          # Exclusiones de entorno, caché y binarios pesados
 └── README.md
+
+## Instalación
+
+```
+
+# Release
+
+Descargar el zip en la pestaña de Release y ejecutar el ejecutable.
+
+# Codigo
+
+Para usar el código es necesario crear un entorno virtual con Python e instalar los requerimientos.
+
+---
